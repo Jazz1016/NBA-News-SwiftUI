@@ -35,6 +35,7 @@ class NetworkHelper {
                 let final = articles.map { article -> Article in
                     var tempArticle = article
                     tempArticle.id = "\(UUID())"
+                    tempArticle.source = article.source.replacingOccurrences(of: "_", with: " ")
                     return tempArticle
                 }
                 

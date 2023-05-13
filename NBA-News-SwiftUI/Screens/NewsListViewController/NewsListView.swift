@@ -15,8 +15,8 @@ struct NewsListView: View {
         var lcArticles = viewModel.articles
         
         return viewModel.searchText == "" ? lcArticles : lcArticles.filter {
-            $0.title.contains(viewModel.searchText)
-        }
+                $0.title.contains(viewModel.searchText)
+            }
     }
     
     func fetchArticles() {
@@ -25,8 +25,7 @@ struct NewsListView: View {
                 case .success(let articles):
                     var tempArticles = articles
                     let sortedArticles = tempArticles.sorted
-                    { $0.title < $1.title
-                    }
+                        { $0.title < $1.title }
                     DispatchQueue.main.async {
                         viewModel.articles = sortedArticles
                     }
@@ -38,21 +37,37 @@ struct NewsListView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(displayedArticles) { article in
-                    NavigationLink {
-                        SafariView(url: article.url)
-                    } label: {
-                        ArticleTitleView(article: article)
+            VStack {
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(mockTeams) { team in
+                            Button {
+                                
+                            } label: {
+                                TeamCell(team: team)
+                            }
+                        }
+                    }
+                }
+                .frame(height: 80)
+                List {
+                    ForEach(displayedArticles) { article in
+                        NavigationLink {
+                            SafariView(url: article.url)
+                        } label: {
+                            ArticleTitleView(article: article)
+                        }
                     }
                 }
             }
+            
+            
         }
         .navigationTitle("NBA News")
         .onAppear {
             fetchArticles()
         }
-        .searchable(text: $viewModel.searchText)
+        .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
     }
 }
 

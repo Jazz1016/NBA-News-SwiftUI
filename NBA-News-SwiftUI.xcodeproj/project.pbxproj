@@ -18,6 +18,8 @@
 		0D4A50722A0EB78A00D27824 /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A50712A0EB78A00D27824 /* NewsListViewModel.swift */; };
 		0D4A50762A0ED21900D27824 /* ArticleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A50752A0ED21900D27824 /* ArticleTitleView.swift */; };
 		0D4A50792A0ED57500D27824 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A50782A0ED57500D27824 /* SafariView.swift */; };
+		0D4A507C2A10041700D27824 /* NBATeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A507B2A10041700D27824 /* NBATeam.swift */; };
+		0D4A50812A10067600D27824 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A50802A10067600D27824 /* TeamCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		0D4A50712A0EB78A00D27824 /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
 		0D4A50752A0ED21900D27824 /* ArticleTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTitleView.swift; sourceTree = "<group>"; };
 		0D4A50782A0ED57500D27824 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		0D4A507B2A10041700D27824 /* NBATeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBATeam.swift; sourceTree = "<group>"; };
+		0D4A50802A10067600D27824 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				0D4A50652A0EA62100D27824 /* Article.swift */,
+				0D4A507B2A10041700D27824 /* NBATeam.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 		0D4A50622A0EA4AA00D27824 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0D4A507D2A10065700D27824 /* Cells */,
 				0D4A506A2A0EA92D00D27824 /* View */,
 			);
 			path = Views;
@@ -142,6 +148,14 @@
 				0D4A50782A0ED57500D27824 /* SafariView.swift */,
 			);
 			path = UIKitComponents;
+			sourceTree = "<group>";
+		};
+		0D4A507D2A10065700D27824 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0D4A50802A10067600D27824 /* TeamCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D4A507C2A10041700D27824 /* NBATeam.swift in Sources */,
 				0D4A50562A0E9DD000D27824 /* ContentView.swift in Sources */,
 				0D4A50792A0ED57500D27824 /* SafariView.swift in Sources */,
 				0D4A50702A0EAC1600D27824 /* ArticleError.swift in Sources */,
+				0D4A50812A10067600D27824 /* TeamCell.swift in Sources */,
 				0D4A50762A0ED21900D27824 /* ArticleTitleView.swift in Sources */,
 				0D4A50692A0EA76C00D27824 /* NewsListView.swift in Sources */,
 				0D4A50542A0E9DD000D27824 /* NBA_News_SwiftUIApp.swift in Sources */,
