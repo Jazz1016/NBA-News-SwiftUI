@@ -16,9 +16,6 @@ struct TeamCell: View {
             Image("NBA-Icon")
                 .resizable()
                 .frame(width: 32, height: 32, alignment: .center)
-//            Text("\(team.name)")
-//                .font()
-//                .frame(width: 32)
         }
         .padding()
     }
